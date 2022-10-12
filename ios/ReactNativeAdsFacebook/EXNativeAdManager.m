@@ -156,7 +156,7 @@ RCT_EXPORT_METHOD(disableAutoRefresh:(NSString*)placementId)
     return [[EXNativeAdView alloc] initWithBridge:_bridge];
 }
 
-RCT_EXPORT_VIEW_PROPERTY(onAdLoaded, RCTBubblingEventBlock)
+RCT_EXPORT_VIEW_PROPERTY(onAdLoaded, RCTDirectEventBlock)
 RCT_CUSTOM_VIEW_PROPERTY(adsManager, NSString, EXNativeAdView)
 {
   view.nativeAd = [_adsManagers[json] nextNativeAd];
